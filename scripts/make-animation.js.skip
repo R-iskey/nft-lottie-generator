@@ -1,0 +1,11 @@
+const generateLotties = require('./generateLotties');
+const renderAnimations = require('./renderAnimations.jsw');
+const sampleJson = require('../samples/sample.json');
+
+function makeAnimation() {
+    const animationLotties = generateLotties(sampleJson, true);
+    renderAnimations(animationLotties)
+}
+
+makeAnimation();
+
