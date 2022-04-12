@@ -1,6 +1,6 @@
 [
   {
-    "name": "Your Collection #1",
+    "name": "Walking Ghost",
     "description": "Remember to replace this description",
     "image": "ipfs://NewUriToReplace/1.png",
     "attributes": [
@@ -10,97 +10,31 @@
       },
       {
         "trait_type": "Eyes",
-        "value": "Sunglasses"
+        "value": "Regular Eyes"
       },
       {
         "trait_type": "Left Hand",
-        "value": "Scythe"
+        "value": "Pentagram 1"
       },
       {
         "trait_type": "Right Hand",
-        "value": "Bear"
+        "value": "Vampire Hunter Crucifix"
       },
       {
         "trait_type": "Head",
-        "value": "Rainbow and clouds"
+        "value": "Beats 1"
       },
       {
         "trait_type": "Mouth",
         "value": "Bubble gum"
       },
       {
-        "trait_type": "Shoes",
-        "value": "High Tops Kicks 1"
-      }
-    ]
-  },
-  {
-    "name": "Your Collection #2",
-    "description": "Remember to replace this description",
-    "image": "ipfs://NewUriToReplace/1.png",
-    "attributes": [
-      {
-        "trait_type": "Body",
-        "value": "Body"
+        "trait_type": "Background",
+        "value": "White"
       },
       {
-        "trait_type": "Eyes",
-        "value": "Sunglasses"
-      },
-      {
-        "trait_type": "Left Hand",
-        "value": "Scythe"
-      },
-      {
-        "trait_type": "Right Hand",
-        "value": "Bear"
-      },
-      {
-        "trait_type": "Head",
-        "value": "Ring"
-      },
-      {
-        "trait_type": "Mouth",
-        "value": "Bubble gum"
-      },
-      {
-        "trait_type": "Shoes",
-        "value": "High Tops Kicks 1"
-      }
-    ]
-  },
-  {
-    "name": "Your Collection #3",
-    "description": "Remember to replace this description",
-    "image": "ipfs://NewUriToReplace/1.png",
-    "attributes": [
-      {
-        "trait_type": "Body",
-        "value": "Body"
-      },
-      {
-        "trait_type": "Eyes",
-        "value": "Eyes_x"
-      },
-      {
-        "trait_type": "Left Hand",
-        "value": "Hockey_Stick"
-      },
-      {
-        "trait_type": "Right Hand",
-        "value": "Slurpee"
-      },
-      {
-        "trait_type": "Head",
-        "value": "Ring"
-      },
-      {
-        "trait_type": "Mouth",
-        "value": "Bubble gum"
-      },
-      {
-        "trait_type": "Shoes",
-        "value": "High Tops Kicks 1"
+        "trait_type": "Feet",
+        "value": "Shit Kickers 1"
       }
     ]
   }
