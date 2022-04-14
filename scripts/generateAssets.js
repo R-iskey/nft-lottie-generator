@@ -16,7 +16,7 @@ function generateAssets(imagePaths) {
     const {width, height, assetsPath, rootPath} = configs;
     return imagePaths.map((imagePath) => {
         const shortFileName = last(imagePath.split('/')).split('.')[0];
-        return new Asset(shortFileName
+        return new Asset(shortFileName.toLowerCase()
             .replaceAll(' ', '_')
             .replaceAll('-', '_'),
             width, height,
