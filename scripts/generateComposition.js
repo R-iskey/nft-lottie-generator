@@ -14,9 +14,9 @@ const traitToAssetRef = {
         path: 'Eyes'
     },
     "Left Hand": {
-        refId: 'image_25',
-        animationRef: 'image_27',
-        specialRef: 'image_26',
+        refId: 'image_9',
+        animationRef: 'image_11',
+        specialRef: 'image_10',
         path: 'Hand Attributes/Left Hand'
     },
     "Right Hand": {
@@ -42,24 +42,24 @@ const traitToAssetRef = {
         path: 'Body',
     },
     Background: {
-        refId: 'image_28',
+        refId: 'image_12',
         path: "Background"
     },
     Feet: {
         path: "Feet",
         animations: [{
             name: 'Left',
-            refRange: [7, 15],
+            refRange: [7, 7],
             assetPrefix: "image_",
             get nameFormatter() {
-                return ' ' + this.name + ' '
+                return ' ' + this.name
             }
         }, {
             name: 'Right',
-            refRange: [16, 24],
+            refRange: [8, 8],
             assetPrefix: "image_",
             get nameFormatter() {
-                return ' ' + this.name + ' '
+                return ' ' + this.name
             }
             
         }],
@@ -75,7 +75,7 @@ function generateComposition(assets, metadata, num) {
     
     const updateComposition = (assetId, layerRefId) => {
         const foundAsset = assets.find(a =>
-            a.id.toLowerCase() === assetId.replaceAll(' ', '_').replaceAll('-', '_').toLowerCase()
+            a.id.toLowerCase() === assetId.toLowerCase().replaceAll(' ', '_').replaceAll('-', '_')
         );
         if (!foundAsset) {
             return;
@@ -98,14 +98,14 @@ function generateComposition(assets, metadata, num) {
         if (foundTrait.animations) {
             foundTrait.animations.forEach(animation => {
                 const [start, end] = animation.refRange;
-                for (let i = start, counter = 1; i <= end; i++, counter++) {
-                    const fullIdInAssets = attr.value + animation.nameFormatter + counter;
+                for (let i = start; i <= end; i++) {
+                    const fullIdInAssets = attr.value + animation.nameFormatter;
                     updateComposition(fullIdInAssets, animation.assetPrefix + i);
                 }
             });
         } else {
             const foundAsset = assets.find(a =>
-                a.id.toLowerCase() === attr.value.replaceAll(' ', '_').replaceAll('-', '_').toLowerCase()
+                a.id.toLowerCase() === attr.value.toLowerCase().replaceAll(' ', '_').replaceAll('-', '_')
             );
             if (!foundAsset) {
                 return;

@@ -5,7 +5,7 @@ module.exports = {
     width: 1000,
     height: 1000,
     rootPath: root,
-    assetsPath: root + '/images/Walking',
+    assetsPath: root + '/images/Floating',
     lottieOutDir: root + '/build/lotties',
     metadataPath: root + '/build/metadata',
     metadata: root + '/metadata.json',
