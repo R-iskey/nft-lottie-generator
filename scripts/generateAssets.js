@@ -13,13 +13,14 @@ class Asset {
 
 
 function generateAssets(imagePaths) {
-    const {width, height, staticPath} = configs;
+    const {width, height, assetsPath, rootPath} = configs;
     return imagePaths.map((imagePath) => {
         const shortFileName = last(imagePath.split('/')).split('.')[0];
         return new Asset(shortFileName
             .replaceAll(' ', '_')
             .replaceAll('-', '_'),
-            width, height, staticPath + '/',
+            width, height,
+            assetsPath.replace(`${rootPath}/`, '') + '/',
             imagePath
         )
     })

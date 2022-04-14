@@ -1,11 +1,14 @@
 const {cwd} = process;
+const root = cwd();
 
 module.exports = {
     width: 1000,
     height: 1000,
-    staticPath: 'images/Walking',
-    lottieOutDir: cwd() + '/build/lotties',
-    metadata: cwd() + '/metadata.json',
+    rootPath: root,
+    assetsPath: root + '/images/Walking',
+    lottieOutDir: root + '/build/lotties',
+    metadataPath: root + '/build/metadata',
+    metadata: root + '/metadata.json',
 };
 
 // Animated hand 01 - image_0 - Right Hand

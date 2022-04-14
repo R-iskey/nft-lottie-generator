@@ -93,7 +93,6 @@ function generateComposition(assets, metadata, num) {
         }
     }
     
-    
     metadata.attributes.forEach(attr => {
         const foundTrait = traitToAssetRef[attr.trait_type];
         if (foundTrait.animations) {
@@ -111,7 +110,7 @@ function generateComposition(assets, metadata, num) {
             if (!foundAsset) {
                 return;
             }
-    
+            
             const specialCase = specialHandAttributes
                 .find(hand => (new RegExp(hand, 'gi')).test(attr.value));
             
@@ -119,7 +118,7 @@ function generateComposition(assets, metadata, num) {
                 : foundAsset.p.includes('.mov')
                     ? 'animationRef'
                     : 'refId';
-    
+            
             updateComposition(attr.value, foundTrait[assetProperty]);
         }
     });
@@ -128,14 +127,3 @@ function generateComposition(assets, metadata, num) {
 }
 
 module.exports = generateComposition;
-
-/**
- * @TODO
- * 0. Generate animations from all of mov combinations
- * ===========
- * 1. Script for replace the assets whitespaces to _ in folders
- * 2. Just keep the feet filenames same as provided (countin reset for right leg)
- * 4. Skip file extensions, for mov files hashlips
- * 5. Remove Hands if it's none
- *
- */

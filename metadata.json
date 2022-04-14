@@ -1,9 +1,285 @@
 [
   {
-    "name": "Walking Ghost",
+    "name": "Walking Ghost #1",
     "description": "Remember to replace this description",
     "image": "ipfs://NewUriToReplace/1.png",
+    "edition": 1,
+    "date": 1649936016976,
     "attributes": [
+      {
+        "trait_type": "Background",
+        "value": "Gradient Background 3"
+      },
+      {
+        "trait_type": "Body",
+        "value": "Body"
+      },
+      {
+        "trait_type": "Eyes",
+        "value": "Sad Eyes"
+      },
+      {
+        "trait_type": "Feet",
+        "value": "X Games Mode 1"
+      },
+      {
+        "trait_type": "Hands",
+        "value": "Slinky"
+      },
+      {
+        "trait_type": "Head",
+        "value": "Cool Cap Pastel 3"
+      },
+      {
+        "trait_type": "Left Hand",
+        "value": "Balloon Animal 4"
+      },
+      {
+        "trait_type": "Mouth",
+        "value": "No Mouth"
+      },
+      {
+        "trait_type": "Right Hand",
+        "value": "Briefcase"
+      }
+    ]
+  },
+  {
+    "name": "Walking Ghost #2",
+    "description": "Remember to replace this description",
+    "image": "ipfs://NewUriToReplace/2.png",
+    "edition": 2,
+    "date": 1649936017160,
+    "attributes": [
+      {
+        "trait_type": "Background",
+        "value": "Gradient Background 4"
+      },
+      {
+        "trait_type": "Body",
+        "value": "Body"
+      },
+      {
+        "trait_type": "Eyes",
+        "value": "Heart Eyes"
+      },
+      {
+        "trait_type": "Feet",
+        "value": "Magic Fren 2 with Socks 1"
+      },
+      {
+        "trait_type": "Hands",
+        "value": "None"
+      },
+      {
+        "trait_type": "Head",
+        "value": "Head Band 1"
+      },
+      {
+        "trait_type": "Left Hand",
+        "value": "Scythe"
+      },
+      {
+        "trait_type": "Mouth",
+        "value": "Rainbow Throwup"
+      },
+      {
+        "trait_type": "Right Hand",
+        "value": "Mr. Beats"
+      }
+    ]
+  },
+  {
+    "name": "Walking Ghost #3",
+    "description": "Remember to replace this description",
+    "image": "ipfs://NewUriToReplace/3.png",
+    "edition": 3,
+    "date": 1649936017307,
+    "attributes": [
+      {
+        "trait_type": "Background",
+        "value": "Gradient Background 3"
+      },
+      {
+        "trait_type": "Body",
+        "value": "Body"
+      },
+      {
+        "trait_type": "Eyes",
+        "value": "Rays Original"
+      },
+      {
+        "trait_type": "Feet",
+        "value": "High Tops Kicks 1"
+      },
+      {
+        "trait_type": "Hands",
+        "value": "None"
+      },
+      {
+        "trait_type": "Head",
+        "value": "Travelers Hat 2"
+      },
+      {
+        "trait_type": "Left Hand",
+        "value": "Pentagram 1"
+      },
+      {
+        "trait_type": "Mouth",
+        "value": "Rainbow Throwup"
+      },
+      {
+        "trait_type": "Right Hand",
+        "value": "Landline 1"
+      }
+    ]
+  },
+  {
+    "name": "Walking Ghost #4",
+    "description": "Remember to replace this description",
+    "image": "ipfs://NewUriToReplace/4.png",
+    "edition": 4,
+    "date": 1649936017449,
+    "attributes": [
+      {
+        "trait_type": "Background",
+        "value": "Gradient Background 6"
+      },
+      {
+        "trait_type": "Body",
+        "value": "Body"
+      },
+      {
+        "trait_type": "Eyes",
+        "value": "Rays Original"
+      },
+      {
+        "trait_type": "Feet",
+        "value": "X Games Mode 6"
+      },
+      {
+        "trait_type": "Hands",
+        "value": "Remote Controlled Truck 1"
+      },
+      {
+        "trait_type": "Head",
+        "value": "Bucket Hat 2"
+      },
+      {
+        "trait_type": "Left Hand",
+        "value": "Pentagram 4"
+      },
+      {
+        "trait_type": "Mouth",
+        "value": "Bent Cigarette"
+      },
+      {
+        "trait_type": "Right Hand",
+        "value": "Cooler"
+      }
+    ]
+  },
+  {
+    "name": "Walking Ghost #5",
+    "description": "Remember to replace this description",
+    "image": "ipfs://NewUriToReplace/5.png",
+    "edition": 5,
+    "date": 1649936017601,
+    "attributes": [
+      {
+        "trait_type": "Background",
+        "value": "Gradient Background 5"
+      },
+      {
+        "trait_type": "Body",
+        "value": "Body"
+      },
+      {
+        "trait_type": "Eyes",
+        "value": "Stunned Eyes"
+      },
+      {
+        "trait_type": "Feet",
+        "value": "Off the Walls 1 with Swaggy Socks"
+      },
+      {
+        "trait_type": "Hands",
+        "value": "None"
+      },
+      {
+        "trait_type": "Head",
+        "value": "Beats 3"
+      },
+      {
+        "trait_type": "Left Hand",
+        "value": "Black Classic Boxing Gloves"
+      },
+      {
+        "trait_type": "Mouth",
+        "value": "No Mouth"
+      },
+      {
+        "trait_type": "Right Hand",
+        "value": "Flowers 3"
+      }
+    ]
+  },
+  {
+    "name": "Walking Ghost #6",
+    "description": "Remember to replace this description",
+    "image": "ipfs://NewUriToReplace/6.png",
+    "edition": 6,
+    "date": 1649936017727,
+    "attributes": [
+      {
+        "trait_type": "Background",
+        "value": "Gradient Background 11"
+      },
+      {
+        "trait_type": "Body",
+        "value": "Body"
+      },
+      {
+        "trait_type": "Eyes",
+        "value": "Stunned Eyes"
+      },
+      {
+        "trait_type": "Feet",
+        "value": "Boots 1"
+      },
+      {
+        "trait_type": "Hands",
+        "value": "None"
+      },
+      {
+        "trait_type": "Head",
+        "value": "Head Band 2"
+      },
+      {
+        "trait_type": "Left Hand",
+        "value": "Black Classic Boxing Gloves"
+      },
+      {
+        "trait_type": "Mouth",
+        "value": "Good Cigarette"
+      },
+      {
+        "trait_type": "Right Hand",
+        "value": "Mr. Beats"
+      }
+    ]
+  },
+  {
+    "name": "Walking Ghost #7",
+    "description": "Remember to replace this description",
+    "image": "ipfs://NewUriToReplace/7.png",
+    "edition": 7,
+    "date": 1649936017866,
+    "attributes": [
+      {
+        "trait_type": "Background",
+        "value": "Gradient Background 16"
+      },
       {
         "trait_type": "Body",
         "value": "Body"
@@ -13,28 +289,163 @@
         "value": "Regular Eyes"
       },
       {
-        "trait_type": "Left Hand",
-        "value": "Pentagram 1"
+        "trait_type": "Feet",
+        "value": "Magic Fren 2 with Swaggy Socks"
       },
       {
-        "trait_type": "Right Hand",
-        "value": "Vampire Hunter Crucifix"
+        "trait_type": "Hands",
+        "value": "None"
       },
       {
         "trait_type": "Head",
-        "value": "Beats 1"
+        "value": "Cool Cap Pastel 3"
+      },
+      {
+        "trait_type": "Left Hand",
+        "value": "Free Hand"
       },
       {
         "trait_type": "Mouth",
-        "value": "Bubble gum"
+        "value": "No Mouth"
       },
       {
+        "trait_type": "Right Hand",
+        "value": "Wicked Slurpee 2"
+      }
+    ]
+  },
+  {
+    "name": "Walking Ghost #8",
+    "description": "Remember to replace this description",
+    "image": "ipfs://NewUriToReplace/8.png",
+    "edition": 8,
+    "date": 1649936018016,
+    "attributes": [
+      {
         "trait_type": "Background",
-        "value": "White"
+        "value": "Gradient Background 11"
+      },
+      {
+        "trait_type": "Body",
+        "value": "Body"
+      },
+      {
+        "trait_type": "Eyes",
+        "value": "Rays Tortoise"
       },
       {
         "trait_type": "Feet",
-        "value": "Shit Kickers 1"
+        "value": "High Tops Kicks 4"
+      },
+      {
+        "trait_type": "Hands",
+        "value": "None"
+      },
+      {
+        "trait_type": "Head",
+        "value": "Cool Cap Multi 2"
+      },
+      {
+        "trait_type": "Left Hand",
+        "value": "Balloon Animal 5"
+      },
+      {
+        "trait_type": "Mouth",
+        "value": "No Mouth"
+      },
+      {
+        "trait_type": "Right Hand",
+        "value": "Wicked Slurpee 1"
+      }
+    ]
+  },
+  {
+    "name": "Walking Ghost #9",
+    "description": "Remember to replace this description",
+    "image": "ipfs://NewUriToReplace/9.png",
+    "edition": 9,
+    "date": 1649936018197,
+    "attributes": [
+      {
+        "trait_type": "Background",
+        "value": "Solid Background 8"
+      },
+      {
+        "trait_type": "Body",
+        "value": "Body"
+      },
+      {
+        "trait_type": "Eyes",
+        "value": "Shades 4"
+      },
+      {
+        "trait_type": "Feet",
+        "value": "Shit Kickers 3"
+      },
+      {
+        "trait_type": "Hands",
+        "value": "None"
+      },
+      {
+        "trait_type": "Head",
+        "value": "Horns"
+      },
+      {
+        "trait_type": "Left Hand",
+        "value": "Pentagram 4"
+      },
+      {
+        "trait_type": "Mouth",
+        "value": "No Mouth"
+      },
+      {
+        "trait_type": "Right Hand",
+        "value": "Glowing Wand 2"
+      }
+    ]
+  },
+  {
+    "name": "Walking Ghost #10",
+    "description": "Remember to replace this description",
+    "image": "ipfs://NewUriToReplace/10.png",
+    "edition": 10,
+    "date": 1649936018362,
+    "attributes": [
+      {
+        "trait_type": "Background",
+        "value": "Solid Background 14"
+      },
+      {
+        "trait_type": "Body",
+        "value": "Body"
+      },
+      {
+        "trait_type": "Eyes",
+        "value": "Stunned Eyes"
+      },
+      {
+        "trait_type": "Feet",
+        "value": "Magic Fren 2 with Socks 2"
+      },
+      {
+        "trait_type": "Hands",
+        "value": "None"
+      },
+      {
+        "trait_type": "Head",
+        "value": "Top Hat 1"
+      },
+      {
+        "trait_type": "Left Hand",
+        "value": "Hockey Stick"
+      },
+      {
+        "trait_type": "Mouth",
+        "value": "No Mouth"
+      },
+      {
+        "trait_type": "Right Hand",
+        "value": "Glowing Wand 4"
       }
     ]
   }
