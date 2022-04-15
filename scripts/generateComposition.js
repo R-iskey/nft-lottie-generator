@@ -37,10 +37,6 @@ const traitToAssetRef = {
         refId: 'image_4',
         path: 'Mouth',
     },
-    Body: {
-        refId: 'image_6',
-        path: 'Body',
-    },
     Background: {
         refId: 'image_12',
         path: "Background"
@@ -95,6 +91,11 @@ function generateComposition(assets, metadata, num) {
     
     metadata.attributes.forEach(attr => {
         const foundTrait = traitToAssetRef[attr.trait_type];
+        if (!foundTrait) {
+            console.log('Cant found trait attribute for ', attr.trait_type, attr.trait_value);
+            return;
+        }
+        
         if (foundTrait.animations) {
             foundTrait.animations.forEach(animation => {
                 const [start, end] = animation.refRange;
