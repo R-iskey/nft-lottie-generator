@@ -26,12 +26,12 @@ const filterConditionalAttributes = (meta) => {
             attributes[leftIndex].value = 'None';
             attributes[rightIndex].value = 'None';
             console.log(`Found Both hands -- Reset the left and right hand, Metadata Edition: ${meta.edition} --`);
-        } else if ((value.search('Boxing') > -1 || value.search('Free Hand') > -1) && !handsModified) {
+        } else if (value.search('Boxing') > -1 && !handsModified) {
             // replace right and left hand if boxing or free hand provided in one of them
             attributes[leftIndex].value = value + ' Left';
             attributes[rightIndex].value = value + ' Right';
             handsModified = true;
-            console.log(`Found Boxing(Free) hands -- Set the left and right hand as ${value}, Metadata Edition: ${meta.edition} --`);
+            console.log(`Found Boxing hands -- Set the left and right hand as ${value}, Metadata Edition: ${meta.edition} --`);
         } else if (value.search('Landline') > -1) {
             // remove head attribute if it's Leadline or Plain Head
             attributes[headIndex].value = 'Plain Head';

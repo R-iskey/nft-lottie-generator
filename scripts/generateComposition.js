@@ -24,6 +24,7 @@ function generateComposition(assets, metadata, num) {
             a.id.toLowerCase() === assetId.replaceAll(' ', '_').replaceAll('-', '_').toLowerCase()
         );
         if (!foundAsset) {
+            console.warn(`**Unable to find the asset "${assetId}" in traits mapping, layerRefId: "${layerRefId}"`)
             return;
         }
         
@@ -59,6 +60,7 @@ function generateComposition(assets, metadata, num) {
                 a.id.toLowerCase() === attr.value.replaceAll(' ', '_').replaceAll('-', '_').toLowerCase()
             );
             if (!foundAsset) {
+                console.warn(`**Unable to find the trait "${attr.trait_type}" in traits mapping, value ${attr.value}`)
                 return;
             }
             

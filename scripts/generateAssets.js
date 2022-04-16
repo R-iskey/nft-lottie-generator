@@ -19,7 +19,7 @@ function generateAssets(imagePaths) {
         return new Asset(shortFileName.toLowerCase()
             .replaceAll(' ', '_')
             .replaceAll('-', '_'),
-            width, height, assetsPath + '/',
+            width, height, assetsPath.replace('/', '') + '/',
             imagePath
         )
     })
