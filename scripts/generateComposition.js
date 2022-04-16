@@ -1,5 +1,9 @@
 const compositionSample = require('../skeletons/compositionSkeleton.json');
-const {clone, cloneDeep} = require('lodash');
+const {cloneDeep} = require('lodash');
+const {getCompositionPath} = require('../utils/directories');
+const fs = require('fs-extra');
+const path = require('path');
+const {traitToAssetRef} = require('../configs');
 
 class Composition {
     constructor(id, layers = []) {
@@ -7,60 +11,6 @@ class Composition {
         this.layers = layers;
     }
 }
-
-const traitToAssetRef = {
-    Eyes: {
-        refId: 'image_5',
-        path: 'Eyes'
-    },
-    "Left Hand": {
-        refId: 'image_9',
-        animationRef: 'image_11',
-        specialRef: 'image_10',
-        path: 'Hand Attributes/Left Hand'
-    },
-    "Right Hand": {
-        refId: 'image_1',
-        animationRef: 'image_0',
-        specialRef: 'image_2',
-        path: 'Hand Attributes/Right Hand',
-    },
-    "Hands": {
-        refId: "image_0",
-        path: "Hands"
-    },
-    Head: {
-        refId: 'image_3',
-        path: 'Head',
-    },
-    Mouth: {
-        refId: 'image_4',
-        path: 'Mouth',
-    },
-    Background: {
-        refId: 'image_12',
-        path: "Background"
-    },
-    Feet: {
-        path: "Feet",
-        animations: [{
-            name: 'Left',
-            refRange: [7, 7],
-            assetPrefix: "image_",
-            get nameFormatter() {
-                return ' ' + this.name
-            }
-        }, {
-            name: 'Right',
-            refRange: [8, 8],
-            assetPrefix: "image_",
-            get nameFormatter() {
-                return ' ' + this.name
-            }
-            
-        }],
-    }
-};
 
 function generateComposition(assets, metadata, num) {
     const compositionLayers = cloneDeep(compositionSample);
@@ -71,9 +21,10 @@ function generateComposition(assets, metadata, num) {
     
     const updateComposition = (assetId, layerRefId) => {
         const foundAsset = assets.find(a =>
-            a.id.toLowerCase() === assetId.toLowerCase().replaceAll(' ', '_').replaceAll('-', '_')
+            a.id.toLowerCase() === assetId.replaceAll(' ', '_').replaceAll('-', '_').toLowerCase()
         );
         if (!foundAsset) {
+            console.warn(`**Unable to find the asset "${assetId}" in traits mapping, layerRefId: "${layerRefId}"`)
             return;
         }
         
@@ -92,7 +43,7 @@ function generateComposition(assets, metadata, num) {
     metadata.attributes.forEach(attr => {
         const foundTrait = traitToAssetRef[attr.trait_type];
         if (!foundTrait) {
-            console.log('Cant found trait attribute for ', attr.trait_type, attr.trait_value);
+            console.warn(`**Unable to find the trait "${attr.trait_type}" in traits mapping`)
             return;
         }
         
@@ -109,6 +60,7 @@ function generateComposition(assets, metadata, num) {
                 a.id.toLowerCase() === attr.value.toLowerCase().replaceAll(' ', '_').replaceAll('-', '_')
             );
             if (!foundAsset) {
+                console.warn(`**Unable to find the trait "${attr.trait_type}" in traits mapping, value ${attr.value}`)
                 return;
             }
             
@@ -124,7 +76,21 @@ function generateComposition(assets, metadata, num) {
         }
     });
     
-    return new Composition(`composition_${metadata.name.replaceAll(' ', '_')}_${num}`, compositionLayers);
+    const compositionPath = getCompositionPath();
+    const compName = `comp_${metadata.name.replaceAll(' ', '_')}_${num}`;
+    
+    const newComposition = new Composition(compName, compositionLayers);
+    
+    // create metadata folder
+    fs.mkdirpSync(compositionPath);
+    
+    fs.writeJsonSync(
+        path.join(compositionPath, `${compName}.json`),
+        newComposition,
+        {spaces: 2}
+    );
+    
+    return newComposition;
 }
 
 module.exports = generateComposition;

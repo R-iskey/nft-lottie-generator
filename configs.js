@@ -1,23 +1,62 @@
-const {cwd} = process;
-const root = cwd();
-
 module.exports = {
     width: 1000,
     height: 1000,
-    rootPath: root,
-    assetsPath: root + '/images/Floating',
-    lottieOutDir: root + '/build/lotties',
-    metadataPath: root + '/build/metadata',
-    metadata: root + '/metadata.json',
+    outDir: '/build',
+    assetsPath: '/images',
+    metadataPath: '/metadata',
+    compositionsPath: '/compositions',
+    sourceMetadata: './metadata.json',
+    traitToAssetRef: {
+        Eyes: {
+            refId: 'image_5',
+            path: 'Eyes'
+        },
+        "Left Hand": {
+            refId: 'image_9',
+            animationRef: 'image_11',
+            specialRef: 'image_10',
+            path: 'Hand Attributes/Left Hand'
+        },
+        "Right Hand": {
+            refId: 'image_1',
+            animationRef: 'image_0',
+            specialRef: 'image_2',
+            path: 'Hand Attributes/Right Hand',
+        },
+        "Hands": {
+            refId: "image_0",
+            path: "Hands"
+        },
+        Head: {
+            refId: 'image_3',
+            path: 'Head',
+        },
+        Mouth: {
+            refId: 'image_4',
+            path: 'Mouth',
+        },
+        Background: {
+            refId: 'image_12',
+            path: "Background"
+        },
+        Feet: {
+            path: "Feet",
+            animations: [{
+                name: 'Left',
+                refRange: [7, 7],
+                assetPrefix: "image_",
+                get nameFormatter() {
+                    return ' ' + this.name
+                }
+            }, {
+                name: 'Right',
+                refRange: [8, 8],
+                assetPrefix: "image_",
+                get nameFormatter() {
+                    return ' ' + this.name
+                }
+                
+            }],
+        }
+    }
 };
-
-// Animated hand 01 - image_0 - Right Hand
-// Right hand - image_1 - Right hand
-// Body 01 - image_2 - Static right hand
-// Left hand - image_8 - Left hand
-// Body 02 - image_26 - Static left hand
-// Animated hand 02 - image_27 - Left hand
-
-/**
- * 2 hands use Animated hand 01 or Body 01(static) and remove Left hand
- */

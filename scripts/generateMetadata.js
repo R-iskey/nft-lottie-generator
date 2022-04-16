@@ -1,5 +1,6 @@
-const fs = require('fs');
-const {metadataPath} = require('../configs');
+const fs = require('fs-extra');
+const {getGeneratedMetadataPath} = require('../utils/directories');
+const path = require('path');
 
 function isDuplicate(values) {
     const seen = new Set();
@@ -22,21 +23,23 @@ function generateMetadata(metadata) {
         throw new Error(`Duplication found on indexes, ${indexes}`);
     }
     
-    // remove metadata folder
-    fs.rmSync(metadataPath, { recursive: true, force: true });
-    // create again
-    fs.mkdirSync(metadataPath);
+    const metadataPath = getGeneratedMetadataPath();
+    
+    // create metadata folder
+    fs.mkdirpSync(metadataPath);
     
     metadata.forEach((meta, index) => {
-        fs.writeFileSync(
-            `${metadataPath}/${index + 1}.json`,
-            JSON.stringify(meta, null, 2)
+        fs.writeJsonSync(
+            path.join(metadataPath, `${index + 1}.json`),
+            meta,
+            {spaces: 2}
         );
     });
     
-    fs.writeFileSync(
-        `${metadataPath}/metadata.json`,
-        JSON.stringify(metadata, null, 2)
+    fs.writeJsonSync(
+        path.join(metadataPath, 'metadata'),
+        metadata,
+        {spaces: 2}
     );
 }
 
